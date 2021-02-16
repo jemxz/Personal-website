@@ -24,14 +24,9 @@ var cmd=require('node-cmd');
     cmd.runSync('git commit -m "First Message"');
     cmd.runSync('git push origin master')
  }
-    cmd.runSync('git add .');
-    cmd.runSync('git commit -m "First Message"');
-    cmd.runSync('git push origin master')
+
 
     
-
- 
-    
-
+setInterval(runForever, 60000)
 // setInterval(runForever, 43200000)
  
