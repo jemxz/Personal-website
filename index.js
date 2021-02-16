@@ -1,4 +1,8 @@
 var fs = require('fs');
+var cmd=require('node-cmd');
+
+
+
  function runForever() { 
       fs.readFile('index.txt', 'utf-8', function(err, data) {
          if (err) throw err;
@@ -15,6 +19,19 @@ var fs = require('fs');
              
          })
      })
- }
 
- setInterval(runForever, 1000)
+    cmd.runSync('git add .');
+    cmd.runSync('git commit -m "First Message"');
+    cmd.runSync('git push origin master')
+ }
+    cmd.runSync('git add .');
+    cmd.runSync('git commit -m "First Message"');
+    cmd.runSync('git push origin master')
+
+    
+
+ 
+    
+
+// setInterval(runForever, 43200000)
+ 
